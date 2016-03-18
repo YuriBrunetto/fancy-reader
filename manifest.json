@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Fancy Reader",
+    "version": "1.0",
+
+    "description": "An extension for Chrome that improves your reading experience.",
+
+    "author": "Yuri Brunetto",
+
+
+    "browser_action": {
+        "default_title": "Fancy reader",
+        "default_icon": "icon.png"
+    },
+
+    "background": {
+        "scripts": ["app.js"],
+        "persistent": false
+    },
+
+    "content_scripts":
+    [
+        {
+            "js": ["app.js"],
+            "matches": ["http://*/*/", "https://*/*/"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab"
+    ]
+}
