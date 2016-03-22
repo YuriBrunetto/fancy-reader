@@ -2,14 +2,14 @@
 
 .fancy-reader { width:640px; background-color:#fff; padding:50px; margin:50px auto; color:#333; border-radius:3px; }
 
-img, iframe { width:100%; }
+.new-body img, iframe { width:100%; }
 
-h1 { font-weight:bold; font-size:32px; text-align:center; }
-h2 { font-weight:bold; font-size:28px; }
-h2 { font-weight:bold; font-size:24px; }
+.new-body h1 { font-weight:bold; font-size:32px; text-align:center; }
+.new-body h2 { font-weight:bold; font-size:28px; }
+.new-body h2 { font-weight:bold; font-size:24px; }
 
-p { font-size:18px; line-height:150%; }
+.new-body p { font-size:18px; line-height:150%; margin:24px 0; }
 
-a { color:#3498db; text-decoration:none; }
-code { font-size:18px; }
-a:hover { text-decoration:underline; }
+.new-body a { color:#3498db; text-decoration:none; }
+.new-body a:hover { text-decoration:underline; }
+.new-body code { font-size:18px; }

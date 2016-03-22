@@ -16,6 +16,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         var $body = $("body");
 
         // saves article content
+        $body.find("div, header").eq(0).remove();
         var $articles = $("h1, h2, p, img");
         var candidates = [];
         var paragraphs = "";
@@ -30,6 +31,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         $("link[rel='stylesheet'], script, style").remove();
         $("*").removeAttr("style");
         $(".carnival, .carnival-comment-indicator").remove();
+        $("img:not([alt])").remove();
 
         // creates a new body and the fancy-reader element
         $body.append("<div class='new-body'></div>");
