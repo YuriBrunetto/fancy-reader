@@ -18,7 +18,8 @@
             "matches": [
                 "<all_urls>"
             ],
-            "js": ["libs/jquery.js", "src/app.js"]
+            "js": ["libs/jquery.js", "src/app.js"],
+            "css": ["css/main.css"]
         }
     ],
 

@@ -11,15 +11,25 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         ** remove all the classes and styles from this "new body"
         */
 
+        // init variables
+        var $window = $(window);
+        var $body = $("body");
+
+        // fonts variables
         var serif = "'Times New Roman', Georgia, serif";
         var sans_serif = "'Helvetica Neue', Helvetica, Arial, sans-serif";
         var titles = $("h1, h2, h3");
         var paragraphs = $("p");
 
-        titles.css("font-family", serif);
-        paragraphs.css("font-family", sans_serif);
+        // remove all styles stuff
+        $("script[type='text/javascript'], link[rel='stylesheet'], style").remove();
+        $("*").removeAttr("style");
 
-        $("link[rel='stylesheet'], style").remove();
+        // creates fancy-reader element
+        $body.append("<article class='new-body'></article>");
+        var $fancy_reader = $("new-body");
+
+
 
         // $('link[rel="stylesheet"], style').remove();
         // $('*').removeAttr('style');
