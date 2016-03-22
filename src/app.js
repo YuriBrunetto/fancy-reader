@@ -15,20 +15,31 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         var $window = $(window);
         var $body = $("body");
 
-        // fonts variables
-        var serif = "'Times New Roman', Georgia, serif";
-        var sans_serif = "'Helvetica Neue', Helvetica, Arial, sans-serif";
-        var titles = $("h1, h2, h3");
-        var paragraphs = $("p");
+        // saves article content
+        var $articles = $("h1, h2, p, img");
+        var candidates = [];
+        var paragraphs = "";
+
+        // $articles.each(function(){
+        //     candidates.push($(this).find("p"));
+        // });
+
+        // console.log(candidates);
 
         // remove all styles stuff
-        $("script[type='text/javascript'], link[rel='stylesheet'], style").remove();
+        $("link[rel='stylesheet'], script, style").remove();
         $("*").removeAttr("style");
+        $(".carnival, .carnival-comment-indicator").remove();
 
-        // creates fancy-reader element
-        $body.append("<article class='new-body'></article>");
-        var $fancy_reader = $("new-body");
+        // creates a new body and the fancy-reader element
+        $body.append("<div class='new-body'></div>");
+        var $new_body = $(".new-body");
 
+        $new_body.append("<article class='fancy-reader'></article>");
+        var $fancy_reader = $(".fancy-reader");
+
+
+        $fancy_reader.html($articles);
 
 
         // $('link[rel="stylesheet"], style').remove();

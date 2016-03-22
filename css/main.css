@@ -1,3 +1,15 @@
-.new-body { width:100%; height:100vh; background-color:#f9f9f9; position:fixed; left:0; top:0; z-index:2000; }
+.new-body { width:100%; background-color:#f9f9f9; position:absolute; left:0; top:0; z-index:2000; overflow:hidden; font-family:Georgia, serif; }
 
-.fancy-reader { width:880px; background-color:#fff; padding:50px; margin:0 auto; color:#333; }
+.fancy-reader { width:640px; background-color:#fff; padding:50px; margin:50px auto; color:#333; border-radius:3px; }
+
+img, iframe { width:100%; }
+
+h1 { font-weight:bold; font-size:32px; text-align:center; }
+h2 { font-weight:bold; font-size:28px; }
+h2 { font-weight:bold; font-size:24px; }
+
+p { font-size:18px; line-height:150%; }
+
+a { color:#3498db; text-decoration:none; }
+code { font-size:18px; }
+a:hover { text-decoration:underline; }
